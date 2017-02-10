@@ -1,0 +1,238 @@
+body html {
+	
+	height: 100%;
+
+}
+
+
+
+.background_img {
+	background-image: url("../img/welcome.jpeg");
+	height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: #f8ffe0;
+
+	
+}
+
+.footer {
+	background-color: #292b2c;
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+}
+
+.box1 {
+	background-color: #292b2c;
+	width: 100%;
+	min-height: 400px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+	opacity: .9;
+	color: white;
+	padding: 20px;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	
+
+
+}
+
+.box_dark {
+	background-color: #bdd7cd;
+	width: 100%;
+	min-height: 400px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+	opacity: .9;
+	color: black;
+	padding: 20px;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	
+
+
+}
+
+.heading_above {
+	position: absolute;
+	top: -30px;
+	font-family: 'Righteous', cursive;
+}
+
+
+.box_content {
+	position: relative;
+	
+	
+}
+
+.center_div {
+	align-content: center;
+}
+
+.standard_image {
+	margin-bottom: 20px;
+
+}
+
+.img_format {
+	width: 50%;
+	max-height: 50%;
+	margin: auto;
+	float:left;
+	padding-right: 10px;
+	padding-top: 5px;
+}
+
+.resume_background {
+	background-color: #f8ffe0;
+	position: relative;
+}
+
+.navbar-brand {
+	font-family: 'Audiowide', cursive;
+}
+
+.social_icon {
+	margin-left: 5px;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.align-text-center {
+	text-align: center;
+}
+
+
+.social_icon {
+    display: inline-block;
+    
+    padding: 0;
+}
+
+.social_icon img {
+    display: block;
+
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+}
+
+.social_icon:hover img {
+    opacity: 0.6;
+
+}
+
+/*.linkedin {
+	background: url('/img/linkedin.png');
+	width: 48px;
+    height: 48px;
+    position:relative;
+}
+
+.youtube {
+	background: url('/img/youtube.png');
+	width: 48px;
+    height: 48px;
+    position:relative;
+}
+
+.mail {
+	background: url('/img/mail.png');
+	width: 48px;
+    height: 48px;
+    position:relative;
+}*/
+
+/*.navbar {
+	margin-bottom: 40px;
+}*/
+
+.nav-link {
+	margin-top: 3px;
+}
+
+.download_resume {
+	text-align: center;
+	margin-top: 40px;
+
+}
+
+.portfolio_background {
+	background-color: black;
+	
+	background-position: 100%;
+	min-height: 100%;
+}
+
+.container {
+	min-height: 100%;
+	position: relative;
+}
+
+.thumb {
+    margin-bottom: 30px;
+}
+
+
+.img_container {
+	max-width: 80%;
+	margin: 0 auto;
+
+}
+.mywork {
+	
+
+}
+
+.title-header {padding: .75rem 1.25rem; background-color: #f5f5f5; border-bottom: 1px solid transparent;}
+.title-header h3 {font-size: 0.80rem; margin: 0;}
+.movies {margin-top: 2rem;}
+.img-card {width: 100%; margin-bottom: .40rem;}
+.movies {margin-bottom: .60rem;}
+.series {margin-bottom: .60rem;}
+
+
+@media (max-width: 991px) {
+	.footer {
+	background-color: #292b2c;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+
+	}
+}
+
+.card {
+	margin-top: 20px;
+}
+
+.card-success {
+	background-color: #bdd7cd;
+}
+
+.btn-outline-secondary {
+	border: 2px solid black;
+    color: black;
+
+}
+
+.btn-outline-secondary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+
+
+
+

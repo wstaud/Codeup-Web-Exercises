@@ -1,0 +1,64 @@
+ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+a {
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+body {
+	background-color: #fffadb;
+	background-image: url("../img/doge_faces.png");
+	min-height: 100%;
+	padding: 0px;
+
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+select {
+	display: block;
+	margin: 10px;
+
+}
+
+.flow {
+	margin: 50px auto;
+	width: 800px;
+	padding: 0px;
+	background-color: white;
+
+}
+
+#yuuup {
+	text-align: center;
+}
+
+
+
+
+
+
+
+

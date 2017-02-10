@@ -1,0 +1,52 @@
+/* Hello World New CSS Style */
+
+/*Elements*/
+body {
+	background-color: #000;
+	background-image: url("../img/helloworld2_wallpaper.png");
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+dt {
+	color: #d400ff;
+	font-weight: bold;
+}
+
+
+
+
+
+/*IDs*/
+#wrapper {
+	background-color: #3ad4ff;
+	width: 800px;
+	margin: 50px auto;
+	padding: 20px;
+	border: 5px solid black;
+
+}
+
+#myBike {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#page_jump {
+	text-align: center;
+	padding-top: 10px;
+}
+
+#body_title {
+	text-align: center;
+	color: white;
+}
+
+#intro {
+	text-align: center;
+}
+
+#hex_table {
+	text-align: center;
+}
+
