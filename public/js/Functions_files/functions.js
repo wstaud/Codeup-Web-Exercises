@@ -88,7 +88,6 @@ function square(a) {
 
 function sumOfSquares(a,b) {
 	var sum = square(a) + square(b);
-	return sum;
 }
 
 
