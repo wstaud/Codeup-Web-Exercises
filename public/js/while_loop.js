@@ -1,3 +1,5 @@
+
+//x2 Problem
 var lastNumber = 65536;
 var firstNumber = 2;
 
@@ -8,10 +10,8 @@ while (firstNumber <= lastNumber) {
 
 
 
-
+//Best Cone Problem
 var allCones = Math.floor(Math.random() * 50) + 50;
-
-
 
 do {
 	var cones = Math.floor(Math.random() * 5) + 1;
@@ -29,6 +29,19 @@ console.log("");
 
 
 
+//Random even/odd problem
+var n = Math.floor(Math.random() * 100);
+var isEven = n%2;
+if (isEven == 0){
+	console.log(n + " is a even number.");
+}else {
+	console.log(n + " is a odd number.");
+}
+
+
+
+
+//Other way to do cone problem
 
 // var allCones = Math.floor(Math.random() * 50) + 50;
 // var cones;
@@ -48,14 +61,6 @@ console.log("");
 // 	}
 // 	console.log(allCones);
 // } while (allCones > 0);
-
-var n = Math.floor(Math.random() * 100);
-var isEven = n%2;
-if (isEven == 0){
-	console.log(n + " is a even number.");
-}else {
-	console.log(n + " is a odd number.");
-}
 
 
 
