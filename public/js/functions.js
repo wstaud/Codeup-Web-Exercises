@@ -41,13 +41,24 @@ isOddConsole(random);
 //exercise 1 function
 function log(logVar) {
 	console.log(logVar);
+	return logVar;
 }
+//exercise 1 call
+var result = log("Bob");
 
 
+
+//--------------------
 //exercise 2 function
 function identity(idVar) {
 	return idVar;
 }
+//exercise 2 call
+var result2 = identity("James");
+console.log(result2);
+
+
+//------------------
 //exercise 3 function
 function getRandomIntBetween(min, max) {
 	return Math.floor((Math.random()*max)+min);
@@ -94,10 +105,6 @@ function sumOfSquares(a,b) {
 
 
 
-//exercise 1 call
-var result = log();
-//exercise 2 call
-var result2 = identity();
 
 
 

@@ -18,7 +18,10 @@
     //        You will need an opening AND closing <ul> tags around the entire string, and <li> tags around each planet.
     //        console.log() your results.
     planetsArray.splice(planetsArray.indexOf("Mercury"), 1, "<ul><li>Mercury");
-    planetsArray.splice(planetsArray.indexOf("Neptune"), 1,  "Neptune<li><ul>");
-    var planetsList = planetsArray.join("<li> <li>");
+    planetsArray.splice(planetsArray.indexOf("Neptune"), 1,  "Neptune</li></ul>");
+    var planetsList = planetsArray.join("</li> <li>");
     console.log(planetsList);
+
+
+    
 })();
