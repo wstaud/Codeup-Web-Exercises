@@ -22,42 +22,42 @@
 
 			var books = [
     				{
-		        		"title": "Dangerous",
-		        		"author": {
-		        			"firstName": "Milo",
-		        			"lastName": "Yiannopoulos"
+		        		title: "Dangerous",
+		        		author: {
+		        			firstName: "Milo",
+		        			lastName: "Yiannopoulos"
 		        		}
 	    			},
 
 	    			{
-		        		"title": "The Legend of Zelda: Breath of the Wild: The Complete Official Guide Collector's Edition",
-		        		"author": {
-		        			"firstName": "Piggyback",
-		        			"lastName": ""
+		        		title: "The Legend of Zelda: Breath of the Wild: The Complete Official Guide Collector's Edition",
+		        		author: {
+		        			firstName: "Piggyback",
+		        			lastName: ""
 		        		}
 	    			},
 
 	    			{
-	    				"title": "1984 (Signet Classics)",
-	    				"author": {
-	    					"firstName": "George",
-	    					"lastName": "Orwell"
+	    				title: "1984 (Signet Classics)",
+	    				author: {
+	    					firstName: "George",
+	    					lastName: "Orwell"
 	    				}
 	    			},
 
 	    			{
-	    				"title": "Milk and Honey",
-	    				"author": {
-	    					"firstName": "Rupi",
-	    					"lastName": "Kaur"
+	    				title: "Milk and Honey",
+	    				author: {
+	    					firstName: "Rupi",
+	    					lastName: "Kaur"
 	    				}
 	    			},
 
 	    			{
-	    				"title": "A Man Called Ove: A Novel",
-	    				"author": {
-	    					"firstName": "Fredrik",
-	    					"lastName": "Backman"
+	    				title: "A Man Called Ove: A Novel",
+	    				author: {
+	    					firstName: "Fredrik",
+	    					lastName: "Backman"
 	    				}
 	    			}
     			]
@@ -75,9 +75,9 @@
 			// end loop here
 
 			books.forEach(function (book, index, array) {
-				console.log("Book #" + index);
+				console.log("Book #" + (index+1));
     			console.log("Title: " + book.title);
-    			console.log("Author: " + book.author.firstName + " " + books[index].author.lastName);
+    			console.log("Author: " + book.author.firstName + " " + book.author.lastName);
     			console.log("---");
 			});
 
