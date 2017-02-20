@@ -24,6 +24,10 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<button id="button1">Button 1</button>
+<button id="button2">Button 2</button>
+<button id="button3">Button 3</button>
+<button id="button4">Button 4</button>
 
 <script>
     (function() {
@@ -32,14 +36,14 @@
         var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // mainHeader.innerHTML = "JavaScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
 
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        // subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName("li");
@@ -47,13 +51,13 @@
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
      
-        for (var i = 0; i < listItems.length; i++) {
-            if (listItems[i].getAttribute("data-dbid") == 1) {   //Allows you to do action based off attribute value
-                listItems[i].style.color = "blue";
-            }else if (i%2 == 1) {                                //Simply does action on every other
-                listItems[i].style.color = "gray"
-            }
-        }
+        // for (var i = 0; i < listItems.length; i++) {
+        //     if (listItems[i].getAttribute("data-dbid") == 1) {   //Allows you to do action based off attribute value
+        //         listItems[i].style.color = "blue";
+        //     }else if (i%2 == 1) {                                //Simply does action on every other
+        //         listItems[i].style.color = "gray"
+        //     }
+        // }
        
 
 
@@ -61,7 +65,50 @@
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!";
+        // subParagraphs[0].innerHTML = "Mission Accomplished!";
+
+        var button1Click = document.getElementById("button1");
+        var button2Click = document.getElementById("button2");
+        var button3Click = document.getElementById("button3");
+        var button4Click = document.getElementById("button4");
+
+        
+
+        var changeMain = function (event) {
+            mainHeader.innerHTML = "JavaScript is Cool";
+        }
+
+        var changeSub = function (event) {
+            subHeader.style.color = "blue";
+        }
+
+
+        var changeListItems = function (event) {
+            for (var i = 0; i < listItems.length; i++) {
+            if (listItems[i].getAttribute("data-dbid") == 1) {   //Allows you to do action based off attribute value
+                listItems[i].style.color = "blue";
+            }else if (i%2 == 1) {                                //Simply does action on every other
+                listItems[i].style.color = "gray"
+            }
+        }
+        }
+
+        var changeParagraph = function (event) {
+            subParagraphs[0].innerHTML = "Mission Accomplished!";
+        }
+
+        button1Click.addEventListener("click", changeMain);
+        button2Click.addEventListener("click", changeSub);
+        button3Click.addEventListener("click", changeListItems);
+        button4Click.addEventListener("click", changeParagraph);
+
+
+
+
+
+
+
+
     })();
 </script>
 </body>
