@@ -1,8 +1,9 @@
+/*Set custom fonts*/
 @font-face {
 	font-family: coolvetica;
 	src: url('/resources/coolvetica.ttf');
 }
-
+/*Set background, force scroll to make it look like a desktop*/
 html {
 	background: url("/img/calcBackground.png") top center no-repeat #000000;
 	background-size: cover;
@@ -10,14 +11,12 @@ html {
 	width: 1680px;
 	overflow-x: scroll;
 }
-
-
+/*Set the master container*/
 .container {
 	position: relative;
 	margin: 0 auto;
-	z-index: 5;
 }
-
+/*Set the display*/
 .screen {
 	width: 326px;
 	height: 120px;
@@ -29,7 +28,7 @@ html {
 	font-size: 40px;
 	border-top: none;
 }
-
+/*Set button style*/
 .button {
 	margin: 0 auto;
 	padding: 0;
@@ -66,7 +65,7 @@ html {
 .container {
 	width: 340px;
 }
-
+/*Set incomming numbers*/
 .inputStyle {
 	width: 100%;
 	height: 100%;
@@ -78,7 +77,33 @@ html {
 	font-family: 'Roboto', sans-serif;
 	color: white;
 }
+/*Hide calc until called*/
+#draggable {
+	display: none;
+}
+/*Set icon location*/
+#icon {
+	position: absolute;
+	right: 25px;
+	bottom: 130px;
+	height: 70px;
+	width: 70px;
 
+}
+/*Set Icon Text*/
+#iconText {
+	position: absolute;
+	right: 18px;
+	bottom: 40px;
+	height: 70px;
+	width: 70px;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	text-shadow: 1px 1px black;
+
+}
+/*Set clickable zone to drag calc*/
 #topBar {
 	width: 326px;
 	height: 20px;
@@ -88,10 +113,8 @@ html {
 	border-top: 1px solid black;
 	border-top-right-radius: 15px;
 	border-top-left-radius: 15px;
-
-
 }
-
+/*Set zero key*/
 #zero {
 	width: 132px;
 	height: 80px;
@@ -100,20 +123,18 @@ html {
 	border-bottom-left-radius: 15px;
 
 }
-
+/*Set Wquals key*/
 #equals {
 	border-bottom-right-radius: 15px;
 }
-
+/*Set specific display perams*/
 #display {
 	width: 316px;;
 	height: 120px;
 	padding-right: 10px;
-	
-	/*background: red;*/
-	
-}
 
+}
+/*Set specific displayInput perams*/
 #displayInput {
 	text-align: right;
 

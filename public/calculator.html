@@ -6,15 +6,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/css/calculator.css">
-		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  		<script>
-  		$( function() {
-    		$( "#draggable" ).draggable();
-  		} );
-  		</script>
 	</head>
-	<body id="loadPage">
+	<body>
+		<!-- Icon desinged to show calculator -->
+		<div id="launchCalc">
+			<img id="icon" src="/img/calc.png">
+			<h3 id="iconText">Calculator</h3>
+		</div>
+		<!-- Calculator -->
 		<div class="container" id="draggable">
 			<div class="col">
 				<div id="topBar"></div>
@@ -55,23 +54,15 @@
 				<div class="button" id="decimal">.</div>
 				<div class="button orange" id="equals">=</div>
 			</div>
-			<!-- added stuff -->
-			<!-- <div class="col">
-				<div class="button" id="zero">0</div>
-				<div class="button" id="decimal">.</div>
-				<div class="button orange" id="equals">=</div>
-			</div>
- -->
 		</div>
+		<!-- Scrips, inline and Jquery loaded below -->
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script>
+  		$( function() {
+    		$( "#draggable" ).draggable();
+  		} );
+  		</script>
 		<script src="/js/calculator.js"></script>
 	</body>
-
-
-
-
-
-
-
-
-
 </html>
