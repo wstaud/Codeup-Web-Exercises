@@ -112,6 +112,7 @@
     var clear = function (event) {
         displayInput.value = 0.0;
         finished = false;
+        holdNum = 0;
     }
 
     //Assigns num1 to what is on the display and assigns the opperator, sets up for num2 input.
@@ -120,48 +121,75 @@
                 opperator = "add";
                 num1 = parseFloat(displayInput.value);
                 displayInput.value = "";
+                finished = false;
             }else if (this.innerHTML == "-") {
                 opperator = "subtract";
                 num1 = parseFloat(displayInput.value);
                 displayInput.value = "";
+                finished = false;
             }else if (this.innerHTML == "x") {
                 opperator = "multiply";
                 num1 = parseFloat(displayInput.value);
                 displayInput.value = "";
+                finished = false;
             }else if (this.innerHTML == "/") {
                 opperator = "divide";
                 num1 = parseFloat(displayInput.value);
                 displayInput.value = "";
+                finished = false;
             }
             console.log(num1);          //debug
             console.log(opperator);     //debug
     }
 
-
+    var holdNum = 0;
     //Assigns num2 to display, equates the problem and sets finished to true to prevent additional equals 
     var complete = function (event) {
+        
         if (finished == false) {
             if (opperator == "add") {
                 num2 = parseFloat(displayInput.value);
                 displayInput.value = (num1 + num2);
                 finished = true;
+                holdNum = num2;
             }else if (opperator == "subtract") {
                 num2 = parseFloat(displayInput.value);
                 displayInput.value = (num1 - num2);
                 finished = true;
+                holdNum = num2;
             }else if (opperator == "multiply") {
                 num2 = parseFloat(displayInput.value);
                 displayInput.value = (num1 * num2);
                 finished = true;
+                holdNum = num2;
             }else if (opperator == "divide") {
                 num2 = parseFloat(displayInput.value);
                 displayInput.value = (num1 / num2);
                 finished = true;
+                holdNum = num2;
             }
             
         }else if (finished == true) {
-            displayInput.value = displayInput.value;
+            num1 = parseFloat(holdNum);
+            var x = displayInput.value;
+            num2 = parseFloat(x);
+            if (opperator == "add") {
+                displayInput.value = (num1 + num2);
+                finished = true;
+            }else if (opperator == "subtract") {
+                displayInput.value = (num1 - num2);
+                finished = true;
+            }else if (opperator == "multiply") {
+                displayInput.value = (num1 * num2);
+                finished = true;
+            }else if (opperator == "divide") {
+                displayInput.value = (num1 / num2);
+                finished = true;
+            }
+
         }
+        console.log(num1);
+        console.log(opperator);
         console.log(num2);  //debug
         console.log(finished); //debug
 
