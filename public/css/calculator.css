@@ -73,7 +73,7 @@
 
 }
 
-#leftHand {
+#display {
 	width: 316px;;
 	height: 120px;
 	padding-right: 10px;
@@ -82,16 +82,18 @@
 	
 }
 
-#leftHandNumber {
+#displayInput {
 	text-align: right;
+
 }
 
 #centerHand {
+	display: none;
 	width: 20px;
 	height: 30px;
 	position: absolute;
-	text-align: center;
-	right: 10px;
+	text-align: left;
+	left: 10px;
 	top: 30px;
 	text-align: center;
 	/*background: white;
