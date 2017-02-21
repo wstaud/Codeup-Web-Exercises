@@ -3,9 +3,19 @@
 	src: url('/resources/coolvetica.ttf');
 }
 
+html {
+	background: url("/img/calcBackground.png") top center no-repeat #000000;
+	background-size: cover;
+	height: 1050px;
+	width: 1680px;
+	overflow-x: scroll;
+}
+
 
 .container {
+	position: relative;
 	margin: 0 auto;
+	z-index: 5;
 }
 
 .screen {
@@ -17,6 +27,7 @@
 	position: relative;
 	font-family: 'Roboto', sans-serif;
 	font-size: 40px;
+	border-top: none;
 }
 
 .button {
@@ -25,8 +36,8 @@
 	position: relative;
 	width: 80px;
 	height: 80px;
-	background: #d6d6d6;
-	border: 1px solid gray;
+	background: #ededed;
+	border: 0.5px solid gray;
 	float: left;
 	text-align: center;
 	line-height: 80px;
@@ -48,6 +59,10 @@
 	background: #d1721b;
 }
 
+.darkButton {
+	background: #d8d8d8;
+}
+
 .container {
 	width: 340px;
 }
@@ -64,13 +79,30 @@
 	color: white;
 }
 
+#topBar {
+	width: 326px;
+	height: 20px;
+	background: #494949;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+
+
+}
 
 #zero {
 	width: 132px;
 	height: 80px;
 	text-align: left;
 	padding-left: 30px;
+	border-bottom-left-radius: 15px;
 
+}
+
+#equals {
+	border-bottom-right-radius: 15px;
 }
 
 #display {
@@ -87,21 +119,6 @@
 
 }
 
-#centerHand {
-	display: none;
-	width: 20px;
-	height: 30px;
-	position: absolute;
-	text-align: left;
-	left: 10px;
-	top: 30px;
-	text-align: center;
-	/*background: white;
-*/}
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
+
+

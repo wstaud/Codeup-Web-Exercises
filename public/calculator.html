@@ -6,21 +6,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/css/calculator.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script>
+  		$( function() {
+    		$( "#draggable" ).draggable();
+  		} );
+  		</script>
 	</head>
-	<body>
-		<div class="container">
+	<body id="loadPage">
+		<div class="container" id="draggable">
+			<div class="col">
+				<div id="topBar"></div>
+			</div>
 			<div class="col">
 				<div class="screen" id="screen">
 					<div id="display">
-						<input value = "" type="number" id="displayInput" class="inputStyle" placeholder="First Number">
+						<input value = "" type="text" step="any" id="displayInput" class="inputStyle" readOnly>
 					</div>
 					<div id="centerHand">x</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="button" id="clear">C</div>
-				<div class="button" id="isNegative">+/-</div>
-				<div class="button" id="percentage">%</div>
+				<div class="button darkButton" id="clear">C</div>
+				<div class="button darkButton" id="isNegative">+/-</div>
+				<div class="button darkButton" id="percentage">%</div>
 				<div class="button orange" id="divide">/</div>
 			</div>
 			<div class="col">
