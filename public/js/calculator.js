@@ -27,7 +27,7 @@
         }else if (buttonCount == 9) {
             var button9 = buttonArray;
         }
-        console.log(buttonCount);  //debug
+       
     }
     //define additional buttons
     var buttonClear = document.getElementById("clear");
@@ -59,7 +59,7 @@
     // var total;               //May be used later to revert to a total system vs display system
 
 
-    //Loads page on button click
+    //Loads calculator on button click
     var loadPage = function (event) {
         
         if (open == false) {
@@ -93,7 +93,7 @@
     //allows user to input a decimal
     var decimal = function (event) {
         var display = displayInput.value;
-        if (display.indexOf(".") > -1) {
+        if (display.indexOf((".") > -1)) {
             display = display.split(".").join("");
             display = display += ".";
             displayInput.value = display;
@@ -103,7 +103,12 @@
     }
     //Turns number into percentage of 100% (ex 100 = 1, 10 = .1, 1 = .01)
     var percentage = function (event) {
-        displayInput.value *= .01;
+        var x = displayInput.value;
+        x = parseFloat(x) * .01;
+        
+        displayInput.value = x;
+        
+
     }
 
 
@@ -138,8 +143,7 @@
                 displayInput.value = "";
                 finished = false;
             }
-            console.log(num1);          //debug
-            console.log(opperator);     //debug
+          
     }
 
     var holdNum = 0;
@@ -186,13 +190,7 @@
                 displayInput.value = (num1 / num2);
                 finished = true;
             }
-
         }
-        console.log(num1);
-        console.log(opperator);
-        console.log(num2);  //debug
-        console.log(finished); //debug
-
     }
 
 
@@ -220,11 +218,4 @@
     launchCalc.addEventListener("click", loadPage);
 
     
-
-
-
-
-
-
-
 })();
