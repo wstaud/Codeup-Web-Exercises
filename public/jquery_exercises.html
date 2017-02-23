@@ -7,11 +7,11 @@
 	</head>
 	<body>
 		<h1 id="landingTitle" class="title">Hello World</h1>
-		<p id="landingSummary" class="summary">This is my world</p>
+		<p id="landingSummary" class="codeup">This is my world</p>
 		<ul id="landingList" class="list">
-			<li id="ll1" class="listItem">List 1</li>
-			<li id="ll2" class="listItem">List 2</li>
-			<li id="ll3" class="listItem">List 3</li>
+			<li id="ll1" class="codeup">List 1</li>
+			<li id="ll2" class="codeup">List 2</li>
+			<li id="ll3" >List 3</li>
 		</ul>
 
 		<div id="stockPhoto" class="container"></div>
@@ -19,20 +19,16 @@
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 		<script>
 			$(document).ready (function() {
-				var landingTitle = $("#landingTitle");
-				var landingSummary = $("#landingSummary");
-				var landingList = $("#landingList");
-				var listItem1 = $("#ll1");
-				var listItem2 = $("#ll2");
-				var listItem3 = $("#ll3");
-				var stockPhoto = $("#stockPhoto");
+				var listItems = $("li");
+				var paragraph = $("p");
+				var header1 = $("h1");
+				var highlight = $("h1, p, li");
 
-				alert(landingSummary.html());
-				stockPhoto.html('<img src="/img/something.jpg">');
+				listItems.css("font-size", "20px");
+				highlight.css("background-color", "yellow");
+				alert(header1.html());
 
 
-
-				
 			});
 		</script>
 	</body>
