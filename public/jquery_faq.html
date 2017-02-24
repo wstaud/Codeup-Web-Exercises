@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Jquery FAQ</title>
+    
+    <style>
+        .invisible {
+            display: none;
+        }
+        
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+<!--10 FAQ about National Forests with defualt class of invisible-->
+    <dl>
+        <dt>How much land is set aside for National Parks?</dt>
+        <dd class="invisible">51 million acres!</dd>
+
+        <dt>Who created Yellow Stone?</dt>
+        <dd class="invisible">President Ulysses S. Grant</dd>
+
+        <dt>What was the first cave to be called a National Park?</dt>
+        <dd class="invisible">Wind Cave National Park</dd>
+
+        <dt>What is the smallest National Park?</dt>
+        <dd class="invisible">Hot Springs National Park in Arkansas</dd>
+
+        <dt>Are National Parks and National Monuments the same thing?</dt>
+        <dd class="invisible">No. "National parks are chosen for their natural beauty, unique geological features, and unusual ecosystems. National monuments are chosen for their historical or archeological significance. - See more at: http://www.austinadventures.com/travel-resources/10-fun-facts-about-national-parks/#sthash.dggwnkgc.dpuf"</dd>
+
+        <dt>Which states do not have a National Park or Monument?</dt>
+        <dd class="invisible">Delaware</dd>
+
+        <dt>Which National Park has the lowest elevation?</dt>
+        <dd class="invisible">Death Valley National Park</dd>
+
+        <dt>Which National Park has the highest elevation?</dt>
+        <dd class="invisible">Mount Whitney</dd>
+
+        <dt>Which US lake is the deepest in the US?</dt>
+        <dd class="invisible">Crater Lake</dd>
+
+        <dt>Which super volcano is responsible for three of six of the largest eruptions ever?</dt>
+        <dd class="invisible">The Yellowstone Caldera</dd>
+    </dl>
+<!--Button to toggle class/visability-->
+    <button id="toggleButton">Toggle</button>
+<!--Scripts load below-->
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var button = $("#toggleButton");
+            var facts = $(".invisible");
+
+            button.click(function (event) {
+                facts.toggleClass("visible")
+
+            });
+            
+        });
+    </script>
+</body>
+
+</html>

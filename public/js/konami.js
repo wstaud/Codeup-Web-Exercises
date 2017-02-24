@@ -87,7 +87,7 @@ $(document).ready (function() {
     	console.log(outputArray);
     	console.log(output);
     	if (output == "Up, Up, Down, Down, Left, Right, Left, Right, B, A, ") {
-    		secret.html('<img src="/img/dogeSpace.gif"> <img src="/img/fingers.gif"> <img src="/img/doge.png"> <img src="/img/russianDoge.png"> <img src="/img/cat.gif"> <img src="/img/salt.gif"> <img src="/img/vapeNation.jpg">  <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/226869951&amp;color=00cc11&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>');
+    		secret.html('<img src="/img/dogeSpace.gif"> <img src="/img/fingers.gif"> <img src="/img/doge.png"> <img src="/img/russianDoge.png"> <img src="/img/cat.gif"> <img src="/img/salt.gif"> <img src="/img/vapeNation.jpg"> <img src="/img/rwby.gif"> <img src="/img/cool.jpeg"> <img src="/img/poptart.gif"> <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/226869951&amp;color=00cc11&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>');
     		title.html("MEME STASH")
     		landing.css("height", "");
     		landing.css("display", "none");
