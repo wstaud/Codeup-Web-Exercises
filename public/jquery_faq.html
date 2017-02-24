@@ -88,13 +88,13 @@
 
 
             button.click(function (event) {
-                facts.fadeToggle();
+                facts.slideToggle();
                 $("ul").each(function (index) {
                     $(this).children().first().css("font-weight", "bold");
                 });
             });
             $("li").click(function (event) {
-                $(this).parent().fadeToggle();
+                $(this).parent().slideToggle();
             });
         });
     </script>
