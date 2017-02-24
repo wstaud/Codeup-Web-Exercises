@@ -2,7 +2,7 @@
 
 <head>
     <title>Jquery FAQ</title>
-    
+
     <style>
         .invisible {
             display: none;
@@ -15,7 +15,8 @@
 </head>
 
 <body>
-<!--10 FAQ about National Forests with defualt class of invisible-->
+    <!--10 FAQ about National Forests with defualt class of invisible-->
+
     <dl>
         <dt>How much land is set aside for National Parks?</dt>
         <dd class="invisible">51 million acres!</dd>
@@ -45,12 +46,13 @@
         <dd class="invisible">Crater Lake</dd>
 
         <dt>Which super volcano is responsible for three of six of the largest eruptions ever?</dt>
-        <dd class="invisible">The Yellowstone Caldera</dd>    
+        <dd class="invisible">The Yellowstone Caldera</dd>
     </dl>
-    
+
     <!--Button to toggle class/visability-->
     <button id="toggleButton">Toggle</button>
-    
+
+    <!--Facts on three different parks-->
     <h3>Wind Cave National Park</h3>
     <ul>
         <li>Was established January 9, 1903.</li>
@@ -58,7 +60,7 @@
         <li>Most boxwork of any known cave, most complex 3D rectilinear maze cave (network maze), seventh longest cave in the world, one of the most diverse mineralogical and speleothem assemblages and one of the largest barometric wind caves in the United States.</li>
         <li>Was the 8th national park.</li>
     </ul>
-    
+
     <h3>Hot Springs National Park</h3>
     <ul>
         <li>Established March 4, 1921.</li>
@@ -66,7 +68,7 @@
         <li>Smallest National Park</li>
         <li>President Andrew Jackson set aside the hot springs as a special reservation.</li>
     </ul>
-    
+
     <h3>Death Valley National Park</h3>
     <ul>
         <li>The average yearly rainfall is 2.36 inches.</li>
@@ -74,27 +76,26 @@
         <li>Death Valley is the largest national park in the contiguous United States with around 3.4 million acres.</li>
         <li>Many scenes in the original "Star Wars" trilogy were filmed in Death Valley.</li>
     </ul>
-    
 
-<!--Scripts load below-->
+
+    <!--Scripts load below-->
     <script src="/js/jquery-3.1.1.min.js"></script>
     <script>
         $(document).ready(function () {
+
             var button = $("#toggleButton");
             var facts = $(".invisible");
-            
+
 
             button.click(function (event) {
-                facts.toggleClass("visible");
-                $("ul").each(function(index) {
-                    $(this).children().first().css("font-weight", "bold"); 
-                });       
+                facts.toggle();
+                $("ul").each(function (index) {
+                    $(this).children().first().css("font-weight", "bold");
+                });
             });
             $("li").click(function (event) {
-                $(this).parent().toggleClass("invisible");
+                $(this).parent().hide();
             });
-            
-            
         });
     </script>
 </body>
