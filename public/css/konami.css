@@ -1,0 +1,147 @@
+/* Declaring Fonts */
+@font-face {
+	font-family: topSecret;
+	src: url('/resources/topSecret.ttf');
+}
+
+@font-face {
+	font-family: digital;
+	src: url('/resources/DS-DIGI.ttf');
+}
+/* Declaring Element styling */
+html {
+	background: #3E505B;
+	min-width: 400px;
+}
+
+img {
+	margin-bottom: 20px;
+	width: 80%;
+}
+
+button {
+	background: transparent;
+	border: 2px solid blue;
+	border-radius: 15px;
+	font-size: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+/* what users see on arrival */
+#landing {
+	width: 70%;
+	max-height: 639px;
+	margin: auto;
+	background: #8789C0;
+	border: 3px solid #8AB0AB;
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	
+}
+/* What users see after unlocking konami*/
+#unlocked {
+	width: 70%;
+	min-height: 605px;
+	margin: auto;
+	background: #8789C0;
+	border: 3px solid #8AB0AB;
+	border-radius: 5px;
+	display: none;
+}
+/* Styling for both displays */
+.screen {
+	width: 80%;
+	height: 55px;
+	background: #5DFDCB;
+	margin: 0 auto;
+	border: 4px solid #7CC6FE;
+	border-radius: 15px;
+	line-height: 55px;
+	text-align: center;
+	position: relative;
+	margin-bottom: 20px;
+	
+}
+/* Centers buttons*/
+.col1 {
+	text-align: center;
+}
+/* First title */
+#title {
+	padding-top: 20px;
+	font-family: topSecret;
+	font-size: 80px;
+	text-align: center;
+	color: #F4FAFF
+}
+/* User unlocked title */
+#titleUnlocked {
+	padding-top: 20px;
+	font-family: topSecret;
+	font-size: 80px;
+	text-align: center;
+	color: #F4FAFF
+}
+/* Top display */
+#display {
+	font-family: digital;
+	font-size: 25px;
+	width: 100%;
+	bottom: -25px;
+	position: absolute;
+	
+	
+}
+/* Bottom display that displays errors*/
+#error {
+	font-family: digital;
+	font-size: 25px;
+	width: 100%;
+	bottom: -25px;
+	position: absolute;
+	
+	
+}
+/* Secret DIV center*/
+#secret {
+	text-align: center;
+
+}
+/* Virtual console styling */
+#console {
+	overflow: scroll;
+	width: 100%;
+	height: 200px;
+	background: black;
+	color: white;
+}
+
+
+
+@media screen and (max-width: 810px) {
+	#title {font-size: 40px;}
+	#titleUnlocked {font-size: 40px;}
+	#display {font-size: 15px;}
+}
+
+@media screen and (max-width: 865px) {
+	#title {font-size: 40px;}
+	#titleUnlocked {font-size: 40px;}
+	#display {font-size: 15px;}
+}
+
+@media screen and (max-width: 530px) {
+	#display {font-size: 15px;}
+	img {width: 90%;}
+	#landing {width: 100%;}
+	#unlocked {width: 100%;}
+
+}
+
+

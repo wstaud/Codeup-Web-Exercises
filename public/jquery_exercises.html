@@ -8,6 +8,7 @@
 	<body>
 		<h1 id="landingTitle" class="title">Hello World</h1>
 		<p id="landingSummary" class="codeup">This is my world</p>
+		<h1 id="btn1">Click Here</h1>
 		<ul id="landingList" class="list">
 			<li id="ll1" class="codeup">List 1</li>
 			<li id="ll2" class="codeup">List 2</li>
@@ -19,15 +20,38 @@
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 		<script>
 			$(document).ready (function() {
+				//Variables
 				var listItems = $("li");
 				var paragraph = $("p");
 				var header1 = $("h1");
 				var highlight = $("h1, p, li");
+				var button = $("#btn1");
+				var isClicked = false;
+				
 
-				listItems.css("font-size", "20px");
-				highlight.css("background-color", "yellow");
-				alert(header1.html());
+				//Modificaitons
 
+				header1.click(function() {
+					if (isClicked == false) {
+						$(this).css("background-color", "blue");
+						isClicked = true;
+					} else {
+						$(this).css("background-color", "transparent");
+						isClicked = false;
+					}
+				})
+
+				paragraph.dblclick(function() {
+					$(this).css("font-size", "18px");
+				})
+				
+
+				listItems.hover(function() {
+					$(this).css("color", "red");
+				}, 
+				function() {
+					$(this).css("color", "black");
+				});
 
 			});
 		</script>

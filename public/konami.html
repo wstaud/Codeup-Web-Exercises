@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>Konami Code</title>
+	    <link rel="stylesheet" type="text/css" href="/css/konami.css">
+	</head>
+	<body>
+		<!-- Defualt landing page -->
+		<div class="container" id="landing">
+			<h1 id="title">Konami Code</h1>
+			<div class="col1">
+				<div id="screen1" class="screen">
+					<h2 id="display"></h2>
+				</div>
+				<div id="screen2" class="screen">
+					<h2 id="error">CLEAN</h2>
+				</div>
+
+			    <button id="reset">Reset</button>
+			    <button id="submit">Submit</button>
+			</div>
+		    <div id="console"></div>
+		</div>
+		
+		<!-- New Container to allow for variable height: Unlocks upon unlocking Konami code -->
+		<div class="container" id="unlocked">
+			<h1 id="titleUnlocked">Konami Code</h1>
+			<div class="col1">
+			<button id="lockButton">Lock</button>
+	    		<div id="secret">
+	    		</div>
+			</div>
+		</div>
+
+	    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+	    <script src="/js/jquery-3.1.1.min.js"></script>
+	    <script src="/js/konami.js"></script>
+	</body>
+</html>
