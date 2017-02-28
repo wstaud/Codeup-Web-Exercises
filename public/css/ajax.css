@@ -1,0 +1,42 @@
+body {
+	background: #2C2C34;
+	color: #CCDDE2;
+}
+
+.container {
+	background: #93A3BC;
+	margin-top: 40px;
+
+}
+.container-fluid {
+	background: #93A3BC;
+	
+}
+
+.title {
+	margin-bottom: 20px;
+}
+
+.blogPost {
+	background: #494850;
+	margin: 20px;
+	padding: 15px;
+	border-radius: 15px;
+
+}
+
+.cat {
+	color: #48ACF0;
+
+}
+
+.date {
+	margin-top: 15px;
+	float: right;
+}
+
+
+#title {
+	font-size: 60px;
+	text-align: center;
+}
