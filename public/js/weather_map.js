@@ -4,6 +4,7 @@
     var url = "http://api.openweathermap.org/data/2.5/forecast/daily"; //Open Weather URL
     var output = $("#output"); //Main DIV to spit out html
     var latLong = $("#cords"); //Outputs lat/long to HTML
+  
     var submitButton = $("#addressSubmit"); //For assigning button click
     var map = document.getElementById("maps"); //For assigning div for google maps to draw on 
     var latLongString = ""; //For concatinating lat/long to string
@@ -38,10 +39,24 @@
                 outputString += ("<div class='space'>" + "<span class='bold'>Pressure: </span>" + data.pressure + "</div>");
                 outputString += ("</div>");
                 //Output above
-                output.html(outputString);     
+                output.html(outputString);
+                
             });
+            //assigning Today, tomorrow and two days out too box banners
+            for (i = 0; i < 3; i++) {
+                if (i == 0) {
+                    document.getElementsByClassName("boxBanner")[i].innerHTML = "Today";
+                }else if (i == 1) {
+                    document.getElementsByClassName("boxBanner")[i].innerHTML = "Tomorrow";
+                }else if (i == 2) {
+                    document.getElementsByClassName("boxBanner")[i].innerHTML = "Two Days Out";
+                }
+            }
         });
     };
+
+     
+
     //setup google map API options
     var mapOptions = {
             // Set the zoom level
@@ -55,7 +70,7 @@
         };
     //MAP vars
     var googleMap = new google.maps.Map(map, mapOptions);
-    var address = "170 Buffalo Pl, Cibolo, TX 78108";
+    
     var geocoder = new google.maps.Geocoder();
     var myLatlng = new google.maps.LatLng(40.15555,-98.489602);
     var lat = myLatlng.lat();

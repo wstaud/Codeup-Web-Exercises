@@ -76,6 +76,13 @@ button:hover {
     font-weight: bold;
 }
 
+.boxBanner {
+    color: #E0ACD5;
+    font-family: 'coolvetica';
+    font-size: 20px;
+    line-height: 50px;
+}
+
 #maps {
     width: 900px;
     height: 400px;
