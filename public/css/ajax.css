@@ -1,10 +1,15 @@
+@font-face {
+	font-family: coolvetica;
+	src: url('/resources/coolvetica.ttf');
+}
+
 body {
-	background: #2C2C34;
+	background: #222222;
 	color: #CCDDE2;
 }
 
 .container {
-	background: #93A3BC;
+	/*background: #93A3BC;*/
 	margin-top: 40px;
 
 }
@@ -15,13 +20,14 @@ body {
 
 .title {
 	margin-bottom: 20px;
+
 }
 
 .blogPost {
 	background: #494850;
 	margin: 20px;
 	padding: 15px;
-	border-radius: 15px;
+	/*border-radius: 15px;*/
 
 }
 
@@ -30,13 +36,59 @@ body {
 
 }
 
+.parallax-window {
+    min-height: 600px;
+    background: transparent;
+    width: 100%;
+  
+}
+
 .date {
 	margin-top: 15px;
 	float: right;
 }
 
-
 #title {
-	font-size: 60px;
+	font-size: 150px;
 	text-align: center;
+	line-height: 300px;
+	font-family: 'coolvetica';
+	color: #3F4531;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+.container {
+	margin-top: 50px;
+	
+}
+
+#footerImg {
+	height: 200px;
+
+}
+
+#aboutMe {
+	background: #494850;
+	height: 250px;
+	width: 700px;
+	margin: 0 auto;
+}
+
+#me {
+	height: 100%;
+	float: left;
+	display: inline;
+}
+
+#meText {
+	margin-left: 20px;
+	margin-top: 20px;
+	position: absolute;
+	width: 400px;
+}
+
+@media screen and (max-width: 840px) {
+	#title {font-size: 15vw;}
+}
+
+

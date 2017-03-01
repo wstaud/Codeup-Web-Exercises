@@ -1,6 +1,7 @@
 (function () {
 
 
+
 var blogPost = $.ajax("/data/blog.json");
 var post = $("#posts");
 var title = $("#title");
