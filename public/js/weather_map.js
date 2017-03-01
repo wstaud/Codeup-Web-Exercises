@@ -3,17 +3,11 @@
     var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8"; //Open Weather APPID
     var url = "http://api.openweathermap.org/data/2.5/forecast/daily"; //Open Weather URL
     var output = $("#output"); //Main DIV to spit out html
-    var latLong = $("#cords");
-    var submitButton = $("#addressSubmit");
-    var map = document.getElementById("maps");
-    var clouds = $("#clouds");
-    var deg = $("#deg");
-    var dt = $("#dt");
-    var humidity = $("#humidity");
-    var pressure = $("#preassure");
-    var speed = $("#speed");
-    var latLongString = "";
-    var outputString = "";
+    var latLong = $("#cords"); //Outputs lat/long to HTML
+    var submitButton = $("#addressSubmit"); //For assigning button click
+    var map = document.getElementById("maps"); //For assigning div for google maps to draw on 
+    var latLongString = ""; //For concatinating lat/long to string
+    var outputString = ""; //for concatinating entire HTML structure output to string
 
     
     
@@ -43,15 +37,9 @@
                 outputString += ("<div class='space'>" + "<span class='bold'>Wind: </span>" + data.speed + "mph </div>");
                 outputString += ("<div class='space'>" + "<span class='bold'>Pressure: </span>" + data.pressure + "</div>");
                 outputString += ("</div>");
-
-
-               
-                output.html(outputString);
-                console.log(data);
-
-                 
+                //Output above
+                output.html(outputString);     
             });
-
         });
     };
     //setup google map API options
@@ -112,14 +100,11 @@
         outputString = "";
         //Reloads new weather data
         getWeather();  
-
-
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
       }
     });
     }
-
 
     submitButton.click(function() {
         codeAddress();
@@ -127,9 +112,5 @@
 
     //First instance of weather load
     getWeather();
-
-    
-
-
 
 })();

@@ -6,6 +6,27 @@
 body {
     margin: 0 auto;
     background: #29E7CD;
+
+}
+
+button {
+    background-color: transparent; /* Green */
+    border: 3px solid #E0ACD5;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 5px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #E0ACD5; /* Green */
+    color: white;
 }
 
 .container {
@@ -73,5 +94,14 @@ body {
     z-index: 50;
     left: -320px;
     bottom: -100px;
+
+}
+
+#address {
+    height: 25px;
+    width: 200px;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-right: 20px;
 
 }
