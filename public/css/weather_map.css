@@ -71,7 +71,7 @@ body {
 #neo {
     position: absolute;
     z-index: 50;
-    right: -320px;
+    left: -320px;
     bottom: -100px;
 
 }

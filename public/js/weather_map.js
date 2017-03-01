@@ -1,9 +1,10 @@
 (function() {
-    var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8";
-    var url = "http://api.openweathermap.org/data/2.5/forecast/daily";
-    var output = $("#output");
-    var output2 = $("#sixDay");
+    //Weather API and general variables
+    var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8"; //Open Weather APPID
+    var url = "http://api.openweathermap.org/data/2.5/forecast/daily"; //Open Weather URL
+    var output = $("#output"); //Main DIV to spit out html
     var latLong = $("#cords");
+    var submitButton = $("#addressSubmit");
     var map = document.getElementById("maps");
     var clouds = $("#clouds");
     var deg = $("#deg");
@@ -12,15 +13,13 @@
     var pressure = $("#preassure");
     var speed = $("#speed");
     var latLongString = "";
-
-
     var outputString = "";
 
     
     
 
 
-
+    //Setup weather API
     var getWeather = function() {
         $.get(url, {
             APPID: APPID,
@@ -28,9 +27,10 @@
             lon: long,
             cnt: 3,  //days outputed up to 16
             units: "imperial"
-
+        //If API fails, alert.
         }).fail(function(data, status) {
             alert("Failed to load:" + status);
+            //Spits out the API data and organizes it in an HTML structure
         }).done(function(data) {
 
             data.list.forEach(function (data, index ,array) {
@@ -54,7 +54,7 @@
 
         });
     };
-
+    //setup google map API options
     var mapOptions = {
             // Set the zoom level
             zoom: 4,
@@ -65,7 +65,7 @@
                 lng: -98.489602
             }
         };
-
+    //MAP vars
     var googleMap = new google.maps.Map(map, mapOptions);
     var address = "170 Buffalo Pl, Cibolo, TX 78108";
     var geocoder = new google.maps.Geocoder();
@@ -75,7 +75,7 @@
     var newLatLong = "";
     //first lat/long run:
     latLong.html("Lat: " + parseFloat(lat).toFixed(2) + "," + " Long: " + parseFloat(long).toFixed(2));
-    
+    //Enables marker drag
     var marker = new google.maps.Marker({
         position: myLatlng,
         map: googleMap,
@@ -83,7 +83,7 @@
         title:"Drag me!"
        
     });
-
+    //Updates lot/long based on dragged marker location
     marker.addListener('mouseup', function() {
         myLatlng = marker.getPosition();
         lat = myLatlng.lat();
@@ -93,20 +93,39 @@
         latLong.html(latLongString);
         latLongString = "";
         outputString = "";
-        getWeather();
-
-
-
-          
+        //Reloads new weather data
+        getWeather();   
         });
 
-    
-    
+    function codeAddress() {
+    var address = document.getElementById('address').value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == 'OK') {
+        googleMap.setCenter(results[0].geometry.location);
+        marker.setPosition(results[0].geometry.location);
+        lat = results[0].geometry.location.lat();
+        long = results[0].geometry.location.lng();
+        latLongString = "";
+        latLongString += "Lat: "+ parseFloat(lat).toFixed(2) + ", Long: " + parseFloat(long).toFixed(2);
+        latLong.html(latLongString);
+        latLongString = "";
+        outputString = "";
+        //Reloads new weather data
+        getWeather();  
 
 
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+    }
 
 
+    submitButton.click(function() {
+        codeAddress();
+    });
 
+    //First instance of weather load
     getWeather();
 
     
