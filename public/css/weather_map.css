@@ -1,11 +1,77 @@
+@font-face {
+    font-family: coolvetica;
+    src: url('/resources/coolvetica.ttf');
+}
+
 body {
     margin: 0 auto;
-    background: #70C1B3;
+    background: #29E7CD;
 }
 
 .container {
     width: 900px;
-    height: 600px;
     
+    margin: 0 auto;
+    background: #6A3E37;
+    text-align: center;
+    position: relative;
+
+}
+
+.weatherBlock {
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+   
+    margin: 15px;
+    padding: 20px;
+    background:#F4EBE8;
+    text-align: center;
+    position: relative;
+    
+
+}
+
+.temps {
+    font-size: 30px;
+    font-family: 'coolvetica';
+    margin-top: 50px;
+}
+
+.space {
+    margin-bottom: 15px;
+}
+
+.boxBanner {
+    width: 240px;
+    height: 50px;
+    background: #3993DD;
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#maps {
+    width: 900px;
+    height: 400px;
+    background: transparent;
+
+}
+
+#cords {
+    color: #E0ACD5;
+    font-size: 30px;
+    font-family: 'coolvetica';
+}
+
+#neo {
+    position: absolute;
+    z-index: 50;
+    right: -320px;
+    bottom: -100px;
 
 }

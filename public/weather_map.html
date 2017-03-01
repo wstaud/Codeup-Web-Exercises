@@ -5,25 +5,30 @@
     <head>
         <title>Weather Map</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
         <link rel="stylesheet" href="/css/weather_map.css">    
     </head>
     <body>  
         <div class="container">
+            <img id="neo" src="/img/neo.png">
             <div class="row">
+                <div id="cords"></div>
                 <div id="output" class="content"></div>
+                
+
             </div>
+            <div id="maps" class="mapContainer"></div>
         </div>
         
 
 
         <!-- scripts -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVeR-wTrxWKnLqEO8EAA21nHdwcFLLF_A"></script>
         <script
             src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
             crossorigin="anonymous"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
+        
+        
         <script src="/js/weather_map.js"></script>
     </body>
 </html>
