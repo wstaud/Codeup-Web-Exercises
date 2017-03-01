@@ -5,7 +5,7 @@
 
 body {
     margin: 0 auto;
-    background: #29E7CD;
+    background: #9E6D4E;
 
 }
 
@@ -33,7 +33,7 @@ button:hover {
     width: 900px;
     
     margin: 0 auto;
-    background: #6A3E37;
+    background: #735851;
     text-align: center;
     position: relative;
 
@@ -46,7 +46,7 @@ button:hover {
    
     margin: 15px;
     padding: 20px;
-    background:#F4EBE8;
+    background:#FFFEE1;
     text-align: center;
     position: relative;
     
@@ -66,7 +66,7 @@ button:hover {
 .boxBanner {
     width: 240px;
     height: 50px;
-    background: #3993DD;
+    background: #A68C6D;
     position: absolute;
     left: 0px;
     top: 0;
@@ -77,7 +77,7 @@ button:hover {
 }
 
 .boxBanner {
-    color: #E0ACD5;
+    color: #FA8CB1;
     font-family: 'coolvetica';
     font-size: 20px;
     line-height: 50px;
@@ -111,4 +111,11 @@ button:hover {
     margin-top: 5px;
     margin-right: 20px;
 
+}
+
+#footer {
+    font-family: 'coolvetica';
+    margin-top: 40px;
+    text-align: center;
+    color: #E0ACD5;
 }
