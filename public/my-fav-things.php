@@ -1,6 +1,14 @@
 <?PHP
 
-$favThings = ['My Motorcycle', 'Anime', 'Manga', 'Linux', 'Programming', 'Food', 'Programming', 'Visual Design'];
+function pageController() {
+    $data = array();
+    $data['favThings'] = ['My Motorcycle', 'Anime', 'Manga', 'Linux', 'Programming', 'Food', 'Programming', 'Visual Design'];
+
+    return $data;
+}
+
+
+extract(pageController());
 ?>
 
 

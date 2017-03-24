@@ -1,4 +1,11 @@
 <?PHP
+
+    function pageController() {
+        $data = array();
+        $data['serverName'] = serverName();
+
+        return $data;
+    }
     function randomSelection($array) {
         $count = sizeof($array);
         $randomNum = rand(0, $count - 1);
@@ -14,6 +21,8 @@
         
         return $serverNameString;
     }
+
+    extract(pageController());
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +33,7 @@
 </head>
 <body>
 
-    <?= "<h1>Server Name: " . serverName() . "</h1>";?>
+    <?= "<h1>Server Name: " . $serverName . "</h1>";?>
 
 </body>
 
