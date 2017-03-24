@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACF,gBAAgB,EAAE,OAAO;;AAE3B,KAAK;EACH,WAAW,EAAE,YAAY;EACzB,SAAS,EAAE,IAAI;;AAEjB,EAAE;EACA,WAAW,EAAE,WAAW;;AAE1B,mBAAmB;EACjB,gBAAgB,EAAE,OAAO;;;EAKzB,WAAW,EAAE,UAAU;EACvB,GAAG,EAAE,gCAAgC;;EAGrC,WAAW,EAAE,SAAS;EACtB,GAAG,EAAE,+BAA+B",
+"sources": ["sass/fav-things.sass"],
+"names": [],
+"file": "fav-things.css"
+}

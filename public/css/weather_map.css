@@ -3,12 +3,13 @@
     src: url('/resources/coolvetica.ttf');
 }
 
+/*awesome chocolate background*/
 body {
     margin: 0 auto;
     background: #9E6D4E;
 
 }
-
+/*Yummy strawberry button*/
 button {
     background-color: transparent; /* Green */
     border: 3px solid #E0ACD5;
@@ -23,12 +24,12 @@ button {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 }
-
+/*ENHANCE Strawberry MOREEEEEEEEEEEE*/
 button:hover {
     background-color: #E0ACD5; /* Green */
     color: white;
 }
-
+/*Okayish dark chocolate container*/
 .container {
     width: 900px;
     
@@ -38,7 +39,7 @@ button:hover {
     position: relative;
 
 }
-
+/*Vanella (I can code but I cant spell)*/
 .weatherBlock {
     display: inline-block;
     width: 200px;
@@ -52,7 +53,7 @@ button:hover {
     
 
 }
-
+/*Tempature stuff*/
 .temps {
     font-size: 30px;
     font-family: 'coolvetica';
