@@ -2,25 +2,19 @@
 
 function pageController() {
     $data = array();
-    $data['count'] =  numCount();
-
-    return $data; 
-}
-
-
-function numCount() {
-    $count = 0;
-    if ($_GET['val'] == "up") {
-        $count += 1;         
+    $data['count'] = 0; 
+    
+    if(isset($_GET['count'])){
+        $data['count'] = $_GET['count'];
     }else{
-        $count -= 1;
+        $count = 0;
     }
-    return $count;
+    return $data;
 }
 
 extract(pageController());
-
 ?>
+
 
 <html>
 <head>
@@ -28,9 +22,9 @@ extract(pageController());
 </head>
 
 <body>
-<h1><?= $count ?></h1>
-    <a href="counter.php?val=up">up</a>
-    <a href="counter.php?val=down">down</a>
-</body?
+    <h1>Count: <?= $count ?></h1>
+    <a href="counter.php?count=<?= $count + 1?>">up</a>
+    <a href="counter.php?count=<?= $count - 1?>">down</a>
+</body>
 
-</html?
+</html>
