@@ -20,6 +20,6 @@ if(isset($_SESSION['username']) && $_SESSION['username'] == "guest") {
 
 <body>
 <h1>Authorized</h1>
-<h2>Hello: <?= $username ?></h2>
+<h2>Hello: <?= escape($username) ?></h2>
 <a href="logout.php" class="button">Logout</a>
 </body>

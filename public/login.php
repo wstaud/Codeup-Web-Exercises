@@ -1,12 +1,13 @@
 <?PHP
 
+require_once "functions.php";
 session_start();
 
 $sessionId = session_id();
 
 
 
-if(isset($_POST['username'])){
+if(inputHas("username")) {
     checkAuth();
 }
 
@@ -15,7 +16,7 @@ if(isset($_SESSION['username']) && $_SESSION['username'] == "guest") {
 }
 
 function checkAuth() {
-    if($_POST["username"] === "guest" && $_POST["password"] === "password"){
+    if(inputGet("username") === "guest" && inputGet("password") === "password"){
         $_SESSION['username'] = "guest";
         header("Location: http://codeup.dev/authorized.php"); 
         exit(); 
