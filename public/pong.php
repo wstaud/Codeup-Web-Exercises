@@ -1,22 +1,22 @@
 <?php
 
-require_once "functions.php";
+require_once "../Input.php";
 
 function pageController() {
     $data = [];
     $data["counter"] = 0;
 
-    if (inputHas("counter")) {
-        $data["counter"] = inputGet("counter");
+    if (Input::has("counter")) {
+        $data["counter"] = Input::get("counter");
     }else{
         $data["counter"] = 0;
     }
 
-    if (inputHas("count")) {
-        if (inputGet("result") === "HIT") {
-            $data["count"] = inputGet("count") + 1;
-        }else if (inputGet("result") === "MISS") {
-            $data["count"] = inputGet("count") - 1;
+    if (Input::has("count")) {
+        if (Input::get("result") === "HIT") {
+            $data["count"] = Input::get("count") + 1;
+        }else if (Input::get("result") === "MISS") {
+            $data["count"] = Input::get("count") - 1;
         }
     } 
     
