@@ -1,28 +1,35 @@
 <?PHP
 
-require_once "functions.php";
-session_start();
+require_once "../Auth.php";
+require_once "../Input.php";
+
+if(!isset($_SESSION)) { 
+    session_start(); 
+} 
+
 
 $sessionId = session_id();
 
 
 
-if(inputHas("username")) {
+if(Input::has("username")) {
     checkAuth();
 }
 
-if(isset($_SESSION['username']) && $_SESSION['username'] == "guest") {
+if(Auth::check()){
     header("Location: http://codeup.dev/authorized.php"); 
 }
 
 function checkAuth() {
-    if(inputGet("username") === "guest" && inputGet("password") === "password"){
-        $_SESSION['username'] = "guest";
-        header("Location: http://codeup.dev/authorized.php"); 
+    $username = Input::get("username");
+    $password = Input::get("password");
+
+    if (Auth::attempt($username, $password)) {
+        header("Location: http://codeup.dev/authorized.php");
         exit(); 
     }else{
-        echo "Incorrect login!"; 
-    }
+        echo "Incorrect login!";
+    } 
 }
 ?>
 

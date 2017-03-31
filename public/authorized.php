@@ -1,10 +1,15 @@
 <?PHP
-session_start();
+require_once "../Auth.php";
+require_once "../Input.php";
+
+if(!isset($_SESSION)) { 
+    session_start(); 
+}
 
 $sessionId = session_id();
 
-if(isset($_SESSION['username']) && $_SESSION['username'] == "guest") {
-    $username = $_SESSION['username'];
+if(Auth::check()) {
+    $username = Auth::user(); 
 }else{
     header("Location: http://codeup.dev/login.php");
     exit();
@@ -20,6 +25,6 @@ if(isset($_SESSION['username']) && $_SESSION['username'] == "guest") {
 
 <body>
 <h1>Authorized</h1>
-<h2>Hello: <?= escape($username) ?></h2>
+<h2>Hello: <?= $username ?></h2>
 <a href="logout.php" class="button">Logout</a>
 </body>
