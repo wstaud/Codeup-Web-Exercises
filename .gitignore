@@ -1,5 +1,6 @@
 .DS_Store
 config.codekit3
+db_connect.php
 .tern-project
 css/main.css.map
 css/.sass-cache/
