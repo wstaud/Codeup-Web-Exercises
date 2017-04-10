@@ -1,0 +1,68 @@
+html {
+  background: #FFF;
+  min-width: 100%;
+  min-height: 100%; }
+
+body {
+  position: relative; }
+
+input {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  font-size: 15px; }
+
+.loginContainer {
+  position: relative;
+  background: #dbdbdb;
+  width: 400px;
+  height: 146px;
+  text-align: right;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px; }
+
+.btn-outline-gray {
+  color: black;
+  background: #00d8ff;
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 0;
+  border: 2px solid gray;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  width: 100%; }
+
+.barInput {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #727272; }
+
+.form-btn {
+  margin-top: 10px; }
+
+#headImg {
+  position: absolute;
+  top: -239px;
+  left: 99px;
+  width: 300px; }
+
+#handImg {
+  position: absolute;
+  top: -47px;
+  left: -8px;
+  width: 150px;
+  z-index: 10; }
+
+#logoImg {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  z-index: 0; }
+
+/*# sourceMappingURL=login.css.map */

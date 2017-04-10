@@ -38,13 +38,13 @@ class Auth {
     }
 
     public static function logout() {
+        $log = new Log();
+        $log->info("User $username logged out.");
         session_unset();
-        session_destroy();
         session_regenerate_id();
-        // session_start();
+        session_destroy();
+        session_start();
     }
 }
-
-
 
 ?>
