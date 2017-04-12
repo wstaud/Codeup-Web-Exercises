@@ -6,25 +6,48 @@ function pageController($dbc) {
     
     $data = [];
     $data['offset'] = 0;
+    $data['page'] = 1;
+    $limit = 3;
 
-    if (Input::has("offset")) {
-        $data['offset'] = Input::get("offset");
+    
+    // Runs user input through Input class
+    if (Input::has("page")) {
+        $data['page'] = Input::get("page");
     }else{
+        $data['page'] = 1;
         $data['offset'] = 0;
     }
 
-    $data['select'] = "SELECT * FROM national_parks LIMIT 5 OFFSET {$data['offset']}";
-    $data['statement'] = $dbc->query($data['select']);
+    // Calculate offset
+    $data['offset'] = ($data['page'] - 1) * 3; 
 
-    $data['parks'] = $data['statement']->fetchAll(PDO::FETCH_ASSOC);
+    // Prevents negative offset
+    if ($data['page'] <= 0 || $data['offset'] < 0) {
+        $data['page'] = 1;
+        $data['offset'] = 0;
+    }
+    $stmt = $dbc->prepare('SELECT * FROM national_parks LIMIT :limit OFFSET :offset');
+    $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+    $stmt->bindValue(':offset', $data['offset'], PDO::PARAM_INT);
+    $stmt->execute();
+    $data['parks'] = $stmt;
+
+    
+    // Calculate total number of pages
+    $data['total'] = $dbc->query('SELECT COUNT(*) FROM national_parks')->fetchColumn();
+    $pages = ceil($data['total'] / 3);
+    
+    // Prevents overflow of pages
+    if ($data['page'] >= $pages) {
+        $data['page'] = $pages;
+    }
 
     return $data;
 }
-
 extract(pageController($dbc));
 ?>
 
-
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -53,13 +76,10 @@ extract(pageController($dbc));
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/national_parks.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="/new_park.php">Add Park</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -80,6 +100,7 @@ extract(pageController($dbc));
                             <th>Location</th>
                             <th>Date Established</th>
                             <th>Area (in acres)</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -90,13 +111,24 @@ extract(pageController($dbc));
                             <td><?= $park['location'] ?></td>
                             <td><?= $park['date_established'] ?></td>
                             <td><?= $park['area_in_acres'] ?></td>
+                            <td><?= $park['description'] ?></td>
                         </tr>
                         <?PHP endforeach; ?>
                     </tbody>
                 </table> 
-                <a class="btn btn-outline-primary" href="http://codeup.dev/national_parks.php?offset=<?= $offset - 5 ?>" role="button">Back</a>
-                <a class="btn btn-outline-primary" href="http://codeup.dev/national_parks.php?offset=<?= $offset + 5 ?>" role="button">Forward</a>
-
+                <div class="buttonContainer">
+                    <?PHP if ($offset > 0) : ?>
+                        <a class="btn btn-outline-primary" href="http://codeup.dev/national_parks.php?page=<?= $page - 1 ?>" role="button">Previous</a>
+                    <?PHP else : ?>
+                        <a class="btn btn-outline-primary disabled" href="http://codeup.dev/national_parks.php?page=<?= $page - 1 ?>" role="button">Previous</a>
+                    <?PHP endif; ?>
+                    <?= $page ?>
+                    <?PHP if ($offset < $total - $offset) : ?>
+                        <a class="btn btn-outline-primary" href="http://codeup.dev/national_parks.php?page=<?= $page + 1 ?>" role="button">Next</a>
+                    <?PHP else : ?>
+                        <a class="btn btn-outline-primary disabled" href="http://codeup.dev/national_parks.php?page=<?= $page + 1 ?>" role="button">Next</a>
+                    <?PHP endif; ?>
+                </div>
             </div>
         </div>
     </div>
