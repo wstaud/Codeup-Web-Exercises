@@ -35,11 +35,11 @@ function pageController($dbc) {
     
     // Calculate total number of pages
     $data['total'] = $dbc->query('SELECT COUNT(*) FROM national_parks')->fetchColumn();
-    $pages = ceil($data['total'] / 3);
+    $data['pages'] = ceil($data['total'] / 3);
     
     // Prevents overflow of pages
-    if ($data['page'] >= $pages) {
-        $data['page'] = $pages;
+    if ($data['page'] >= $data['pages']) {
+        $data['page'] = $data['pages'];
     }
 
     return $data;
@@ -106,12 +106,12 @@ extract(pageController($dbc));
                     <tbody>
                         <?PHP foreach ($parks as $park) : ?>
                         <tr>
-                            <td><?= $park['id'] ?></td>
-                            <td><?= $park['name'] ?></td>
-                            <td><?= $park['location'] ?></td>
-                            <td><?= $park['date_established'] ?></td>
-                            <td><?= $park['area_in_acres'] ?></td>
-                            <td><?= $park['description'] ?></td>
+                            <td><?= htmlspecialchars(strip_tags($park['id'])) ?></td>
+                            <td><?= htmlspecialchars(strip_tags($park['name'])) ?></td>
+                            <td><?= htmlspecialchars(strip_tags($park['location'])) ?></td>
+                            <td><?= htmlspecialchars(strip_tags($park['date_established'])) ?></td>
+                            <td><?= htmlspecialchars(strip_tags($park['area_in_acres'])) ?></td>
+                            <td><?= htmlspecialchars(strip_tags($park['description'])) ?></td>
                         </tr>
                         <?PHP endforeach; ?>
                     </tbody>
@@ -123,7 +123,7 @@ extract(pageController($dbc));
                         <a class="btn btn-outline-primary disabled" href="http://codeup.dev/national_parks.php?page=<?= $page - 1 ?>" role="button">Previous</a>
                     <?PHP endif; ?>
                     <?= $page ?>
-                    <?PHP if ($offset < $total - $offset) : ?>
+                    <?PHP if ($page < $pages) : ?>
                         <a class="btn btn-outline-primary" href="http://codeup.dev/national_parks.php?page=<?= $page + 1 ?>" role="button">Next</a>
                     <?PHP else : ?>
                         <a class="btn btn-outline-primary disabled" href="http://codeup.dev/national_parks.php?page=<?= $page + 1 ?>" role="button">Next</a>
