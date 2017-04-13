@@ -95,7 +95,6 @@ extract(pageController($dbc));
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>#</th>
                             <th>Park Name</th>
                             <th>Location</th>
                             <th>Date Established</th>
@@ -106,7 +105,6 @@ extract(pageController($dbc));
                     <tbody>
                         <?PHP foreach ($parks as $park) : ?>
                         <tr>
-                            <td><?= htmlspecialchars(strip_tags($park['id'])) ?></td>
                             <td><?= htmlspecialchars(strip_tags($park['name'])) ?></td>
                             <td><?= htmlspecialchars(strip_tags($park['location'])) ?></td>
                             <td><?= htmlspecialchars(strip_tags($park['date_established'])) ?></td>
